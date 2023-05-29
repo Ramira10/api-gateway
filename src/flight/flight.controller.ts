@@ -6,6 +6,9 @@ import { IFlight } from 'src/common/interfaces/flight.interface';
 import { FlightMSG, PassengerMSG } from 'src/common/constants';
 import { HttpException } from '@nestjs/common/exceptions';
 import { HttpStatus } from '@nestjs/common/enums';
+import { ApiTags } from '@nestjs/swagger';
+
+@ApiTags('flights')
 @Controller('api/v2/flight')
 export class FlightController {
     constructor(private readonly clientProxy: ClientProxySuperFlights) { }
