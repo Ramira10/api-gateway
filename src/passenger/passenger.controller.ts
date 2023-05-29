@@ -30,7 +30,7 @@ export class PassengerController {
         return this._clientProxyPassenger.send(PassengerMSG.UPDATE, { id, passengerDTO });
     }
 
-    @Get(':id')
+    @Delete(':id')
     delete(@Param('id') id: string): Observable<any> {
         return this._clientProxyPassenger.send(PassengerMSG.DELETE, id);
     }
